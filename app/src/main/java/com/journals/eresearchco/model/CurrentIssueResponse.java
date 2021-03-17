@@ -1,19 +1,49 @@
 package com.journals.eresearchco.model;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 public class CurrentIssueResponse {
 
-    @SerializedName("status")
+    /**
+     * currentissue_cnt : 5
+     * status : true
+     * message : Records Found
+     * currentissue_details : [{"sno":"64251","title":"GC-MS, Analysis, Antimicrobial Examination and Antioxidant Properties\r\nof the Leaves of Tilkor [Momoradica monadelpha] in Different Solvents","author_names":"Panshu Pratik\r\nand Md. Athar Shadique","abstractlink":"gcms-analysis-antimicrobial-examination-and-antioxidant-propertiesrnof-the-leaves-of-tilkor-momoradica-monadelpha-in-dif-64251.html","pdflink":"https://www.eresearchco.com/articles/gcms-analysis-antimicrobial-examination-and-antioxidant-propertiesof-the-leaves-of-tilkor-momoradica-monadelpha-in-diffe.pdf","fulltextlink":null,"sup_file":"","spage_num":"1","lpage_num":"10","doi_num":"","doi_stat":"0","old_omics_id":"0","art_type":"Research Article","vol_issue_name":"Volume 6, Issue 2","vol":"6","issue":"2"},{"sno":"64254","title":"Internet of Things (IoT) to Study the Wild Life: A Review","author_names":"Pawitar Dulari\r\n, Ajay Bhushan\r\n, Brijender Bhushan\r\nand Vivek C. Chandel","abstractlink":"internet-of-things-iot-to-study-the-wild-life-a-review-64254.html","pdflink":"https://www.eresearchco.com/articles/internet-of-things-iot-to-study-the-wild-life-a-review.pdf","fulltextlink":null,"sup_file":"","spage_num":"11","lpage_num":"15","doi_num":"","doi_stat":"0","old_omics_id":"0","art_type":"Review","vol_issue_name":"Volume 6, Issue 2","vol":"6","issue":"2"},{"sno":"64258","title":"Synthesis of 3-Substituted benzyl-6-phenyl-1,2-dihydro-1,2,4,5-tetrazine\r\nand Assignment of Structural Formula","author_names":"Ram Vinay Thakur, Shabina Perween, A. K. L. Das, K. K. Jha, Panshu Pratik & S. R. Kumar","abstractlink":"synthesis-of-3substituted-benzyl6phenyl12dihydro1245tetrazinernand-assignment-of-structural-formula-64258.html","pdflink":"https://www.eresearchco.com/articles/synthesis-of-3substituted-benzyl6phenyl12dihydro1245tetrazineand-assignment-of-structural-formula.pdf","fulltextlink":null,"sup_file":"","spage_num":"16","lpage_num":"21","doi_num":"","doi_stat":"0","old_omics_id":"0","art_type":"Research Article","vol_issue_name":"Volume 6, Issue 2","vol":"6","issue":"2"},{"sno":"64260","title":"Floristic Studies on Cryptogams of Sarkaghat region in Himachal\r\nPradesh, India","author_names":"Poonam and Hem Chander","abstractlink":"floristic-studies-on-cryptogams-of-sarkaghat-region-in-himachalrnpradesh-india-64260.html","pdflink":"https://www.eresearchco.com/articles/floristic-studies-on-cryptogams-of-sarkaghat-region-in-himachalpradesh-india.pdf","fulltextlink":null,"sup_file":"","spage_num":"22","lpage_num":"36","doi_num":"","doi_stat":"0","old_omics_id":"0","art_type":"Research Article","vol_issue_name":"Volume 6, Issue 2","vol":"6","issue":"2"},{"sno":"64265","title":"Pathogenesis, Incidence and Severity of some Fungal Crop Diseases in Hamirpur region of Himachal Pradesh","author_names":"M. V. Sharmab and Hem Chander","abstractlink":"pathogenesis-incidence-and-severity-of-some-fungal-crop-diseases-in-hamirpur-region-of-himachal-pradesh-64265.html","pdflink":"https://www.eresearchco.com/articles/pathogenesis-incidence-and-severity-of-some-fungal-crop-diseases-in-hamirpur-region-of-himachal-pradesh.pdf","fulltextlink":null,"sup_file":"","spage_num":"27","lpage_num":"31","doi_num":"","doi_stat":"0","old_omics_id":"0","art_type":"Research Article","vol_issue_name":"Volume 6, Issue 2","vol":"6","issue":"2"}]
+     */
+
+    private int currentissue_cnt;
     private boolean status;
-    @SerializedName("message")
     private String message;
-    @SerializedName("currentissue_cnt")
-    private int currentissueCnt;
-    @SerializedName("currentissue_details")
-    private List<CurrentissueDetailsBean> currentissueDetails;
+    /**
+     * sno : 64251
+     * title : GC-MS, Analysis, Antimicrobial Examination and Antioxidant Properties
+     of the Leaves of Tilkor [Momoradica monadelpha] in Different Solvents
+     * author_names : Panshu Pratik
+     and Md. Athar Shadique
+     * abstractlink : gcms-analysis-antimicrobial-examination-and-antioxidant-propertiesrnof-the-leaves-of-tilkor-momoradica-monadelpha-in-dif-64251.html
+     * pdflink : https://www.eresearchco.com/articles/gcms-analysis-antimicrobial-examination-and-antioxidant-propertiesof-the-leaves-of-tilkor-momoradica-monadelpha-in-diffe.pdf
+     * fulltextlink : null
+     * sup_file :
+     * spage_num : 1
+     * lpage_num : 10
+     * doi_num :
+     * doi_stat : 0
+     * old_omics_id : 0
+     * art_type : Research Article
+     * vol_issue_name : Volume 6, Issue 2
+     * vol : 6
+     * issue : 2
+     */
+
+    private List<CurrentissueDetailsBean> currentissue_details;
+
+    public int getCurrentissue_cnt() {
+        return currentissue_cnt;
+    }
+
+    public void setCurrentissue_cnt(int currentissue_cnt) {
+        this.currentissue_cnt = currentissue_cnt;
+    }
 
     public boolean isStatus() {
         return status;
@@ -31,54 +61,30 @@ public class CurrentIssueResponse {
         this.message = message;
     }
 
-    public int getCurrentissueCnt() {
-        return currentissueCnt;
+    public List<CurrentissueDetailsBean> getCurrentissue_details() {
+        return currentissue_details;
     }
 
-    public void setCurrentissueCnt(int currentissueCnt) {
-        this.currentissueCnt = currentissueCnt;
-    }
-
-    public List<CurrentissueDetailsBean> getCurrentissueDetails() {
-        return currentissueDetails;
-    }
-
-    public void setCurrentissueDetails(List<CurrentissueDetailsBean> currentissueDetails) {
-        this.currentissueDetails = currentissueDetails;
+    public void setCurrentissue_details(List<CurrentissueDetailsBean> currentissue_details) {
+        this.currentissue_details = currentissue_details;
     }
 
     public static class CurrentissueDetailsBean {
-        @SerializedName("sno")
         private String sno;
-        @SerializedName("month")
-        private String month;
-        @SerializedName("year")
-        private String year;
-        @SerializedName("title")
         private String title;
-        @SerializedName("author_names")
-        private String authorNames;
-        @SerializedName("abstractlink")
+        private String author_names;
         private String abstractlink;
-        @SerializedName("pdflink")
         private String pdflink;
-        @SerializedName("fulltextlink")
         private String fulltextlink;
-        @SerializedName("sup_file")
-        private String supFile;
-        @SerializedName("art_type")
-        private String artType;
-        @SerializedName("page_num")
-        private Object pageNum;
-        @SerializedName("lpage_num")
-        private String lpageNum;
-        @SerializedName("doi_num")
-        private Object doiNum;
-        @SerializedName("journal")
-        private String journal;
-        @SerializedName("vol")
+        private String sup_file;
+        private String spage_num;
+        private String lpage_num;
+        private String doi_num;
+        private String doi_stat;
+        private String old_omics_id;
+        private String art_type;
+        private String vol_issue_name;
         private String vol;
-        @SerializedName("issue")
         private String issue;
 
         public String getSno() {
@@ -89,22 +95,6 @@ public class CurrentIssueResponse {
             this.sno = sno;
         }
 
-        public String getMonth() {
-            return month;
-        }
-
-        public void setMonth(String month) {
-            this.month = month;
-        }
-
-        public String getYear() {
-            return year;
-        }
-
-        public void setYear(String year) {
-            this.year = year;
-        }
-
         public String getTitle() {
             return title;
         }
@@ -113,12 +103,12 @@ public class CurrentIssueResponse {
             this.title = title;
         }
 
-        public String getAuthorNames() {
-            return authorNames;
+        public String getAuthor_names() {
+            return author_names;
         }
 
-        public void setAuthorNames(String authorNames) {
-            this.authorNames = authorNames;
+        public void setAuthor_names(String author_names) {
+            this.author_names = author_names;
         }
 
         public String getAbstractlink() {
@@ -145,52 +135,68 @@ public class CurrentIssueResponse {
             this.fulltextlink = fulltextlink;
         }
 
-        public String getSupFile() {
-            return supFile;
+        public String getSup_file() {
+            return sup_file;
         }
 
-        public void setSupFile(String supFile) {
-            this.supFile = supFile;
+        public void setSup_file(String sup_file) {
+            this.sup_file = sup_file;
         }
 
-        public String getArtType() {
-            return artType;
+        public String getSpage_num() {
+            return spage_num;
         }
 
-        public void setArtType(String artType) {
-            this.artType = artType;
+        public void setSpage_num(String spage_num) {
+            this.spage_num = spage_num;
         }
 
-        public Object getPageNum() {
-            return pageNum;
+        public String getLpage_num() {
+            return lpage_num;
         }
 
-        public void setPageNum(Object pageNum) {
-            this.pageNum = pageNum;
+        public void setLpage_num(String lpage_num) {
+            this.lpage_num = lpage_num;
         }
 
-        public String getLpageNum() {
-            return lpageNum;
+        public String getDoi_num() {
+            return doi_num;
         }
 
-        public void setLpageNum(String lpageNum) {
-            this.lpageNum = lpageNum;
+        public void setDoi_num(String doi_num) {
+            this.doi_num = doi_num;
         }
 
-        public Object getDoiNum() {
-            return doiNum;
+        public String getDoi_stat() {
+            return doi_stat;
         }
 
-        public void setDoiNum(Object doiNum) {
-            this.doiNum = doiNum;
+        public void setDoi_stat(String doi_stat) {
+            this.doi_stat = doi_stat;
         }
 
-        public String getJournal() {
-            return journal;
+        public String getOld_omics_id() {
+            return old_omics_id;
         }
 
-        public void setJournal(String journal) {
-            this.journal = journal;
+        public void setOld_omics_id(String old_omics_id) {
+            this.old_omics_id = old_omics_id;
+        }
+
+        public String getArt_type() {
+            return art_type;
+        }
+
+        public void setArt_type(String art_type) {
+            this.art_type = art_type;
+        }
+
+        public String getVol_issue_name() {
+            return vol_issue_name;
+        }
+
+        public void setVol_issue_name(String vol_issue_name) {
+            this.vol_issue_name = vol_issue_name;
         }
 
         public String getVol() {

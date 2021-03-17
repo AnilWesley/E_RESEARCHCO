@@ -72,10 +72,10 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
                 bundle.putString("journal", modelList.get(position).getManagejournal());
-                bundle.putString("page_url", modelList.get(position).getHomeUrl());
+                bundle.putString("page_url", modelList.get(position).getHome_url());
                 bundle.putString("journalcode", modelList.get(position).getJournal());
-                bundle.putString("rel_keyword", modelList.get(position).getRelKeyword());
-                bundle.putString("track_paper", modelList.get(position).getTrackPaper());
+                bundle.putString("rel_keyword", modelList.get(position).getRel_keyword());
+                bundle.putString("track_paper", modelList.get(position).getTrack_paper());
                 Navigation.findNavController(v).navigate(R.id.dashBoardFragment,bundle);
             }
         });

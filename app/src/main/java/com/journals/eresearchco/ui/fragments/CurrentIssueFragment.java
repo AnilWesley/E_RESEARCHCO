@@ -84,7 +84,7 @@ public class CurrentIssueFragment extends Fragment {
 
 
             if (homeResponse.isStatus()) {
-                List<CurrentIssueResponse.CurrentissueDetailsBean> catDetailsBeanList = homeResponse.getCurrentissueDetails();
+                List<CurrentIssueResponse.CurrentissueDetailsBean> catDetailsBeanList = homeResponse.getCurrentissue_details();
 
                 currentissueDetailsBeanArrayList.addAll(catDetailsBeanList);
 

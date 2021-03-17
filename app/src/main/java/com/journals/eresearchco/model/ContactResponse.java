@@ -1,12 +1,14 @@
 package com.journals.eresearchco.model;
 
-import com.google.gson.annotations.SerializedName;
-
 public class ContactResponse {
 
-    @SerializedName("status")
+
+    /**
+     * status : true
+     * message : Thank you for your Contact We Will Contact Soon...
+     */
+
     private boolean status;
-    @SerializedName("message")
     private String message;
 
     public boolean isStatus() {

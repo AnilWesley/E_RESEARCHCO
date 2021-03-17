@@ -31,7 +31,7 @@ public interface Api {
     Call<CategoryResponse> getCategoryList(@Body JsonObject jsonObject);
 
     @Headers("Content-Type: application/json")
-    @POST("aboutjournalapi.php")
+    @POST("abtjournalapi.php")
     Call<JournalHomeResponse> getJournalHomeDetails(@Body JsonObject jsonObject);
 
     @Headers("Content-Type: application/json")

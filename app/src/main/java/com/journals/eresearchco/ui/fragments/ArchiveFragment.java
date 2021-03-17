@@ -92,7 +92,7 @@ public class ArchiveFragment extends Fragment {
 
             if (homeResponse != null){
                 archiveDetailsBeanArrayList.clear();
-                List<ArchiveResponse.ArchiveYearsBean> catDetailsBeanList = homeResponse.getArchiveYears();
+                List<ArchiveResponse.ArchiveYearsBean> catDetailsBeanList = homeResponse.getArchive_years();
                 archiveDetailsBeanArrayList.addAll(catDetailsBeanList);
 
                 archiveHeadAdapter = new ArchiveHeadAdapter(archiveDetailsBeanArrayList);

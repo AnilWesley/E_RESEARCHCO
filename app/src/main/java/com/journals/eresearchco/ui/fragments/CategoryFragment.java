@@ -89,7 +89,7 @@ public class CategoryFragment extends Fragment {
 
 
             if (homeResponse != null){
-                List<CategoryResponse.JournalDetailsBean> catDetailsBeanList = homeResponse.getJournalDetails();
+                List<CategoryResponse.JournalDetailsBean> catDetailsBeanList = homeResponse.getJournal_details();
 
                 subcatDetailsBeanArrayList.addAll(catDetailsBeanList);
 

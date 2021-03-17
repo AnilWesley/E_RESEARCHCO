@@ -41,7 +41,7 @@ public class ArchiveHeadAdapter extends RecyclerView.Adapter<ArchiveHeadAdapter.
             }
 
         }*/
-        ArchiveChildAdapter archiveChildAdapter = new ArchiveChildAdapter(modelList.get(position).getArchiveDetails());
+        ArchiveChildAdapter archiveChildAdapter = new ArchiveChildAdapter(modelList.get(position).getArchive_details());
         holder.rowItemBinding.recyclerviewChildList.setAdapter(archiveChildAdapter);
 
     }

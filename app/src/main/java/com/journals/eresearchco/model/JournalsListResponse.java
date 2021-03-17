@@ -1,27 +1,33 @@
 package com.journals.eresearchco.model;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 public class JournalsListResponse {
 
 
-    @SerializedName("journal_cnt")
-    private int journalCnt;
-    @SerializedName("status")
-    private boolean status;
-    @SerializedName("message")
-    private String message;
-    @SerializedName("journal_details")
-    private List<JournalDetailsBean> journalDetails;
+    /**
+     * journal_cnt : 2
+     * status : true
+     * message : Records Found
+     * journal_details : [{"managejournal":"Asian Journal of Advanced Basic Sciences","journal":"ajabs"},{"managejournal":"Journal of Biological and chemical Chronicles","journal":"jbcc"}]
+     */
 
-    public int getJournalCnt() {
-        return journalCnt;
+    private int journal_cnt;
+    private boolean status;
+    private String message;
+    /**
+     * managejournal : Asian Journal of Advanced Basic Sciences
+     * journal : ajabs
+     */
+
+    private List<JournalDetailsBean> journal_details;
+
+    public int getJournal_cnt() {
+        return journal_cnt;
     }
 
-    public void setJournalCnt(int journalCnt) {
-        this.journalCnt = journalCnt;
+    public void setJournal_cnt(int journal_cnt) {
+        this.journal_cnt = journal_cnt;
     }
 
     public boolean isStatus() {
@@ -40,18 +46,16 @@ public class JournalsListResponse {
         this.message = message;
     }
 
-    public List<JournalDetailsBean> getJournalDetails() {
-        return journalDetails;
+    public List<JournalDetailsBean> getJournal_details() {
+        return journal_details;
     }
 
-    public void setJournalDetails(List<JournalDetailsBean> journalDetails) {
-        this.journalDetails = journalDetails;
+    public void setJournal_details(List<JournalDetailsBean> journal_details) {
+        this.journal_details = journal_details;
     }
 
     public static class JournalDetailsBean {
-        @SerializedName("managejournal")
         private String managejournal;
-        @SerializedName("journal")
         private String journal;
 
         public String getManagejournal() {
