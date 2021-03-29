@@ -3,7 +3,15 @@ apply plugin: 'com.android.application'
 android {
 
     
-        compileSdkVersion 30
+        signingConfigs {
+            release {
+                storeFile file('D:\\OmicsProjects\\Omics\\E_RESEARCHCO\\jks\\eresearchco.jks')
+                storePassword 'eresearchco'
+                keyAlias 'eresearchco'
+                keyPassword 'eresearchco'
+            }
+        }
+    compileSdkVersion 30
     buildToolsVersion '30.0.3'
 
     defaultConfig {
@@ -14,6 +22,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
 
 
     }
